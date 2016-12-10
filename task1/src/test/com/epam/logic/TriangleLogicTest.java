@@ -19,7 +19,7 @@ public class TriangleLogicTest {
     public void isRectangularTest(){
         Triangle triangle = null;
         try {
-            triangle = new TriangleCreator(new Point(0, 0), new Point(4, 0), new Point(4, 3)).create();
+            triangle = TriangleCreator.create(new Point(0, 0), new Point(4, 0), new Point(4, 3));
         } catch (TriangleCreateException e) {
             LOGGER.log(Level.ERROR, "Triangle do not create during testing", e);
         }
@@ -31,7 +31,7 @@ public class TriangleLogicTest {
     public void calculatePerimeterTest(){
         Triangle triangle = null;
         try {
-            triangle = new TriangleCreator(new Point(0, 0), new Point(4, 0), new Point(4, 3)).create();
+            triangle = TriangleCreator.create(new Point(0, 0), new Point(4, 0), new Point(4, 3));
         } catch (TriangleCreateException e) {
             LOGGER.log(Level.ERROR, "Triangle do not create during testing", e);
         }
@@ -45,7 +45,7 @@ public class TriangleLogicTest {
     public void calculateSquareTest(){
         Triangle triangle = null;
         try {
-            triangle = new TriangleCreator(new Point(0, 0), new Point(4, 0), new Point(4, 3)).create();
+            triangle = TriangleCreator.create(new Point(0, 0), new Point(4, 0), new Point(4, 3));
         } catch (TriangleCreateException e) {
             LOGGER.log(Level.ERROR, "Triangle do not create during testing", e);
         }

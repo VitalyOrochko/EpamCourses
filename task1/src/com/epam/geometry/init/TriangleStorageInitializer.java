@@ -21,7 +21,7 @@ public class TriangleStorageInitializer {
         Triangle triangle = null;
         while(pointStorage.countOfPoints() >= COUNT_POINTS_FOR_TRIANGLE){
             try {
-                triangle = new TriangleCreator(pointStorage.takePoint(), pointStorage.takePoint(), pointStorage.takePoint()).create();
+                triangle = TriangleCreator.create(pointStorage.takePoint(), pointStorage.takePoint(), pointStorage.takePoint());
             } catch (TriangleCreateException e) {
                 LOGGER.log(Level.ERROR, "Triangle do not create", e);
             } catch (StorageException e) {
