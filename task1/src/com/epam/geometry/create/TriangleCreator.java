@@ -11,6 +11,8 @@ public class TriangleCreator {
     public static Triangle create(Point first, Point second, Point third) throws TriangleCreateException {
         if(!PointLogic.isLocateSameLine(first, second, third)){
             return new Triangle(first, second, third);
-        }else throw new TriangleCreateException("Points locate on the same line");
+        }else{
+            throw new TriangleCreateException("Points locate on the same line");
+        }
     }
 }

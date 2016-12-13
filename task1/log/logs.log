@@ -1,2 +1,4 @@
 15:43:12.497 [main] INFO  com.epam.geometry.Main - hello word
 15:44:40.526 [main] INFO  com.epam.geometry.Main - hello word
+17:19:41.396 [main] FATAL com.epam.geometry.util.JSONUtil - java.io.FileNotFoundException: 
+17:21:29.399 [main] FATAL com.epam.geometry.util.JSONUtil - java.io.FileNotFoundException:

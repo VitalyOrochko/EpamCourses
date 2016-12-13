@@ -1,8 +1,8 @@
 package com.epam.geometry.util;
 
 
-public interface Tags {
-    String POINTS = "POINTS";
-    String X = "X";
-    String Y = "Y";
+public class Tags {
+    public static final String POINTS = "points";
+    public static final String X = "X";
+    public static final String Y = "Y";
 }

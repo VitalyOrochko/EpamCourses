@@ -16,16 +16,17 @@ public class JSONUtil {
 
     public static JSONObject loadJSONObject(String path){
         JSONParser parser = new JSONParser();
-        JSONObject object = null;
-
         try {
-            object = (JSONObject) parser.parse(new FileReader(path));
+            JSONObject object = (JSONObject) parser.parse(new FileReader(path));
+            return object;
         } catch (IOException e) {
-            LOGGER.log(Level.ERROR, e);
+            LOGGER.log(Level.FATAL, e);
+            throw new RuntimeException("Problem with input data");
         } catch (ParseException e) {
-            LOGGER.log(Level.ERROR, e);
+            LOGGER.log(Level.FATAL, e);
+            throw new RuntimeException("Problem with parsing input data");
         }
-        return object;
+
     }
 
     public static JSONArray objectToArray(JSONObject jsonObject){
